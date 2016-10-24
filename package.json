@@ -1,6 +1,6 @@
 {
   "name": "electrode-ota-server-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Electrode OTA Server Manager Plugin",
   "homepage": "https://github.com/electrode-io/electrode-ota-server-manager",
   "author": {

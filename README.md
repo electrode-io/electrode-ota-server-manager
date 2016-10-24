@@ -1,5 +1,6 @@
-# electrode-ota-server-manager [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Electrode OTA Server Manager Plugin
+Electrode OTA Server Manager Plugin
+===
+The electrode-ota-server-manager  is a UI plugin for the server giving clients a ui for managing there applications. The UI is based on [electrode-ota-ui](httos://github.com/electrode-io/electrode-ota-ui)
 
 ## Installation
 

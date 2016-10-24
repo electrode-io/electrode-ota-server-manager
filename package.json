@@ -9,9 +9,6 @@
     "url": ""
   },
   "contributors": [],
-  "files": [
-    "lib"
-  ],
   "main": "./server/index.js",
   "keywords": [
     "Electrode",

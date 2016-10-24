@@ -10,13 +10,10 @@ $ npm install --save electrode-ota-server-manager
 ## Usage
 
 ```js
-var electrodeOtaServerManager = require('electrode-ota-server-manager');
-
-electrodeOtaServerManager('Rainbow');
 ```
 ## License
 
-Apache-2.0 © [Justin Spears]()
+Apache-2.0 © [Justin Spears](https://github.com/electrode-io/electrode-ota-server-manager)
 
 
 [npm-image]: https://badge.fury.io/js/electrode-ota-server-manager.svg

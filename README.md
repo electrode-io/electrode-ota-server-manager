@@ -5,20 +5,69 @@
 
 ```sh
 $ npm install --save electrode-ota-server-manager
+
 ```
 
 ## Usage
-
+To use the server manager you need to set a few things up.
+First in your development.json or production.json
 ```js
+{
+
+  "plugins": {
+    "inert": {
+      "enable": true
+    },
+    "electrode-ota-server-dao-cassandra": {
+      //see electrode-ota-server for config
+    },
+    "electrode-ota-server-auth": {
+      //see electrode-ota-server for config
+    },
+    //adds management to the login option
+    "electrode-ota-server-routes-auth": {
+      "options": {
+        "providers": [
+          {
+            "name": "github",
+            "auth": "github-oauth",
+            "label": "GitHub",
+            "icon": {
+              "src": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
+              "height": 50,
+              "width": 50
+            }
+          },
+          {
+            "name": "manager/login",
+            "auth": "github-oauth",
+            "label": "Management",
+            "redirectTo": "/manager",
+            "canRegister":false,
+            "icon": {
+              "src":"/manager/assets/electrode-logo.png",
+              "height": 50,
+              "width": 50
+            }
+          }
+        ]
+      }
+    },
+    //initialize electrode-ota-server-manager
+    "electrode-ota-server-manager": {
+
+    }
+  }
+}
+
+
 ```
+## Then start the server
+```sh
+ $ npm start
+``
+
 ## License
 
-Apache-2.0 © [Justin Spears](https://github.com/electrode-io/electrode-ota-server-manager)
+Apache-2.0 © [WalmartLabs](https://github.com/electrode-io/electrode-ota-server-manager)
 
-
-[npm-image]: https://badge.fury.io/js/electrode-ota-server-manager.svg
-[npm-url]: https://npmjs.org/package/electrode-ota-server-manager
-[travis-image]: https://travis-ci.org/jspears/electrode-ota-server-manager.svg?branch=master
-[travis-url]: https://travis-ci.org/jspears/electrode-ota-server-manager
-[daviddm-image]: https://david-dm.org/jspears/electrode-ota-server-manager.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jspears/electrode-ota-server-manager
